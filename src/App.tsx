@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import Axios from 'axios';
 
-function App() {
+export default function App() {
+  const [cinema, setCinema] = useState([]);
+
+  useEffect(() => {
+    // https://www.omdbapi.com/?s=${searchValue}&apikey=4a3b711b
+    Axios.get(`https://www.omdbapi.com/?s=1917&apikey=4a3b711b`).then((response) => {
+      setCinema(response.data);
+      console.log(response.data);
+    });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <div>{JSON.stringify(cinema)}</div> */}
+
+      {cinema.map((items) => {
+        return (
+          <ul>
+            <li key={items.Search}>123</li>
+          </ul>
+        );
+      })}
     </div>
   );
 }
-
-export default App;
