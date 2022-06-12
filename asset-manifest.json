@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/kinosearch/static/css/main.4eba4558.css",
+    "main.js": "/kinosearch/static/js/main.efd38e7b.js",
+    "index.html": "/kinosearch/index.html",
+    "main.4eba4558.css.map": "/kinosearch/static/css/main.4eba4558.css.map",
+    "main.efd38e7b.js.map": "/kinosearch/static/js/main.efd38e7b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4eba4558.css",
+    "static/js/main.efd38e7b.js"
+  ]
+}
